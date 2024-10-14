@@ -12,4 +12,6 @@ sqlc:
 	sqlc generate
 test:
 	go test -v -cover ./...
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test
+exec:
+	docker exec -it my-postgres-12 psql -U postgres -d golangpro
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test exec
