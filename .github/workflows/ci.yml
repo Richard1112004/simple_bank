@@ -20,6 +20,7 @@ jobs:
           POSTGRES_PASSWORD: mysecretpassword
           POSTGRES_DB: golangpro
         # Set health checks to wait until postgres has started
+          POSTGRES_PORT: 5433
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
